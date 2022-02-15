@@ -93,11 +93,11 @@ def main():
 ### tiempo
         st.subheader('Tiempo')
         if tempo == 0:
-            st.write('Tiempo rápido')
-        elif tempo == 1:
             st.write('Tiempo lento')
-        elif tempo == 2:
+        elif tempo == 1:
             st.write('Tiempo medio')
+        elif tempo == 2:
+            st.write('Tiempo rápido')
         
 ### género
         st.subheader('Género')
