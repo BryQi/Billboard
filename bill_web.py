@@ -1,11 +1,8 @@
 #importar librerias
 from cmath import e
-<<<<<<< HEAD
+
 from pyexpat import features
-=======
-from textwrap import dedent
-from this import d
->>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
+
 import streamlit as st
 import pickle
 import pandas as pd
@@ -39,9 +36,26 @@ def classify(num):
 
 def main():
     #titulo
-    st.title('Modelamiento')
+    st.image(
+    "https://phantom-marca.unidadeditorial.es/772232b91f820ff4d5aaf3eae6dc4c31/resize/1320/f/jpg/assets/multimedia/imagenes/2020/10/15/16027188459256.jpg",
+    width=None,) 
+
+    # Título
+    html_temp = """
+    <h1 style="color:#2A759D;text-align:center;">¿Probabilidad de llegar al TOP 1 del Premio Billboard Hot 100</h1>
+    El Billboard Hot 100 es una gran lista de éxitos musicales de los 100 sencillos más vendidos en Estados Unidos, 
+    que ayuda a promover la industria musical nacional e internacional, y se define como la más importante de las listas de
+     Billboard junto con la Billboard 200.
+    <br>
+    Variables de anális:
+    <br>
+    <br>
+    </div>
+
+    """
+    st.markdown(html_temp,unsafe_allow_html=True)
     #titulo de sidebar
-    st.sidebar.header('User Input Parameters')
+    st.sidebar.header('Parámetros de entrada')
 
     #funcion para poner los parametrso en el sidebar
     def user_input_parameters():    
@@ -140,34 +154,19 @@ def main():
         return features 
 
     df = user_input_parameters()
-<<<<<<< HEAD
+
         
     #escoger el modelo preferido
-    option = ['Linear Regression', 'Logistic Regression', 'Árbol']
+    option = [ 'Árbol de decision']
 
-    model = st.sidebar.selectbox('Which model you like to use?', option)
-=======
+    model = st.sidebar.selectbox('Algoritmo?', option)
 
-
-
-    #escoger el modelo preferido
-    option = ['Linear Regression', 'Logistic Regression', 'Árbol de desición']
-    model = st.sidebar.selectbox('Que modelo desea usar?', option)
->>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
 
     #st.subheader('Parámetros de entrada')
     st.subheader(model)
 
     st.write(df)
 
-<<<<<<< HEAD
-    
-=======
-
-    
-        
-
->>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
     if st.button('EJECUTAR PARA PREDECIR'):
         x_i = np.asarray(df).reshape(1,-1)
         if model == 'Linear Regression':
@@ -181,17 +180,11 @@ def main():
             st.success('La probabilidad del Acierto es: {}'.format(probabilidad[:,1]*100))
         else:
             st.success(classify(decision_tree.predict(df)))
-<<<<<<< HEAD
+
             x_i=np.asarray(df).reshape(1,-1)
             probabilidad = decision_tree.predict_proba(x_i)
             st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
             
-    
-   
-=======
-
-     
->>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
 if __name__ == '__main__':
     main()
     
