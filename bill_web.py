@@ -97,7 +97,7 @@ def main():
         elif tempo == 1:
             st.write('Tiempo lento')
         elif tempo == 2:
-            st.write('Ritmo medio')
+            st.write('Tiempo medio')
         
 ### género
         st.subheader('Género')
