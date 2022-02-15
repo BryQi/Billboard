@@ -1,5 +1,6 @@
 #importar librerias
 from cmath import e
+from pyexpat import features
 import streamlit as st
 import pickle
 import pandas as pd
@@ -10,11 +11,15 @@ import plotly.figure_factory as ff
 import numpy as np
 
 #Extrar los archivos pickle
+#varaible vacia para almacenar probabilidad
+decision_tree = ''
+
 with open('lin_reg.pkl', 'rb') as li:
     lin_reg = pickle.load(li)
 
 with open('log_reg.pkl', 'rb') as lo:
     log_reg = pickle.load(lo)
+
 
 with open('decision_treeE.pkl', 'rb') as sv:
     decision_tree = pickle.load(sv)
@@ -129,8 +134,7 @@ def main():
         return features
     
     df = user_input_parameters()
-
-    
+        
     #escoger el modelo preferido
     option = ['Linear Regression', 'Logistic Regression', 'Árbol']
     model = st.sidebar.selectbox('Which model you like to use?', option)
@@ -140,12 +144,21 @@ def main():
     st.write(df)
 
     if st.button('EJECUTAR PARA PREDECIR'):
+        x_i = np.asarray(df).reshape(1,-1)
         if model == 'Linear Regression':
             st.success(classify(lin_reg.predict(df)))
+            x_i = np.asarray(df).reshape(1,-1)  
+            st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
+
         elif model == 'Logistic Regression':
             st.success(classify(log_reg.predict(df)))
+            x_i=np.asarray(df).reshape(1,-1)
+            st.success('La probabilidad del Acierto es: {}'.format(probabilidad[:,1]*100))
         else:
             st.success(classify(decision_tree.predict(df)))
+            x_i=np.asarray(df).reshape(1,-1)
+            probabilidad = decision_tree.predict_proba(x_i)
+            st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
     
 
     
