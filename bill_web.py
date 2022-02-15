@@ -181,7 +181,7 @@ def main():
             st.success(classify(decision_tree.predict(df)))
             x_i=np.asarray(df).reshape(1,-1)
             probabilidad = decision_tree.predict_proba(x_i)
-            st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
+            st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100 )+ "%")
             
 if __name__ == '__main__':
     main()
