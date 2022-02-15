@@ -164,7 +164,6 @@ def main():
 
     #st.subheader('Parámetros de entrada')
     st.subheader(model)
-
     st.write(df)
 
     if st.button('EJECUTAR PARA PREDECIR'):
