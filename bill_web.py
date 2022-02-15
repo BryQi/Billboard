@@ -59,18 +59,18 @@ def main():
 
     #funcion para poner los parametrso en el sidebar
     def user_input_parameters():    
-        mood=estado_Animo = st.sidebar.slider('Estado de animo', 0, 6, 6 )
-        e=tiempo = st.sidebar.slider('Tiempo', 0, 2, 2)
-        genero = st.sidebar.slider('Genero', 0, 4, 4)
-        tipo_Artista = st.sidebar.slider('Tipo artista', 0, 3, 3)
-        edad = st.sidebar.slider('Edad', 0, 4, 4)
-        duracion = st.sidebar.slider('Duración', 0, 6, 6)
+        mood =estado_Animo = st.sidebar.slider('Estado de animo', 0, 6, 6 )
+        tempo =tiempo = st.sidebar.slider('Tiempo', 0, 2, 2)
+        gen = genero = st.sidebar.slider('Genero', 0, 4, 4)
+        tipo = tipo_Artista = st.sidebar.slider('Tipo artista', 0, 3, 3)
+        eda = edad = st.sidebar.slider('Edad', 0, 4, 4)
+        dura= duracion = st.sidebar.slider('Duración', 0, 6, 6)
         data = {'Estado de ánimo': estado_Animo,
                 'Tiempo': tiempo,
-                'Genero': genero,
+                'Género': genero,
                 'Tipo de artista': tipo_Artista,
                 'Edad': edad,
-                'Duracion': duracion,
+                'Duración': duracion,
                 }
         features = pd.DataFrame(data, index=[0])
 ###### datos estáticos quemados
@@ -78,78 +78,78 @@ def main():
     
         st.subheader('Estado de ánimo')
         if mood == 6:
-                st.caption('Empowering')
+                st.caption('Energizar - Potenciar')
         elif mood == 5:
-                st.caption('Cool')
+                st.caption('Fresco - Emocionado - Entusiasmado - Agitado - Animado')
         elif mood == 4:
-               st.caption('Yearning')
+               st.caption('Sofisticado - Agresivo - Ardiente - Alborotador - Sentimental - Melancólico - Inquietante')
         elif mood == 3:
-                st.caption('Gritty')
+                st.caption('Desafiante')
         elif mood == 2: 
-                st.caption('Sensual')
+                st.caption('Sensual - Romantico')
         elif mood == 1:
-                st.caption('Easygoing')
+                st.caption('Tranquilo')
+        
 ### tiempo
         st.subheader('Tiempo')
-        if e == 0:
-            st.write('Fast Tempo')
-        elif e == 1:
-            st.write('Slow Tempo')
-        elif e== 2:
-            st.write('Medium Tempo')
+        if tempo == 0:
+            st.write('Tiempo rápido')
+        elif tempo == 1:
+            st.write('Tiempo lento')
+        elif tempo == 2:
+            st.write('Ritmo medio')
         
 ### género
-        st.subheader('Genero')
-        if e == 0:
-            st.write('Soundtrack - Jazz - Other')
-        elif e == 1:
-            st.write('Alternative - Punk - Electronica - Rock')
-        elif e== 2:
-            st.write('Traditional')
-        elif e== 3:
+        st.subheader('Género')
+        if gen == 0:
+            st.write(' Banda sonora - Jazz - Otros')
+        elif gen == 1:
+            st.write('Alternativa - Punk - Electrónica - Rock')
+        elif gen == 2:
+            st.write('Tradicional')
+        elif gen == 3:
             st.write('Pop')
-        elif e== 4:
-            st.write('Urban') 
+        elif gen == 4:
+            st.write('Urbano') 
 ### tipo de artista
         st.subheader('Tipo de artista')
-        if e == 0:
+        if tipo == 0:
             st.write(' ')
-        elif e == 1:
-            st.write('Mixed')
-        elif e== 2:
-            st.write('Female')
-        elif e== 3:
-            st.write('Male')
+        elif tipo == 1:
+            st.write('Mixto')
+        elif tipo == 2:
+            st.write('Mujer')
+        elif tipo == 3:
+            st.write('Hombre')
 
 ### edad
         st.subheader('Edad')
-        if e == 0:
-            st.write('Monor a 21 años')
-        elif e == 1:
+        if  eda == 0:
+            st.write('Menor a 21 años')
+        elif  eda == 1:
             st.write('De 22 a 26 años')
-        elif e== 2:
+        elif  eda == 2:
             st.write('De 27 a 30 años')
-        elif e== 3:
+        elif  eda == 3:
             st.write('De 31 a 40 años')
-        elif e== 4:
+        elif  eda== 4:
             st.write('Mayor a 41 años')
 ### edad
         st.subheader('Duración')
-        if e == 0:
-            st.write('Monor a 150 segundos')
-        elif e == 1:
+        if dura == 0:
+            st.write('Menor a 150 segundos')
+        elif dura == 1:
             st.write('De 151 a 180 segundos')
-        elif e== 2:
+        elif dura == 2:
             st.write('De 181 a 210 segundos')
-        elif e== 3:
+        elif dura == 3:
             st.write('De 211 a 240 segundos')
-        elif e== 4:
+        elif dura == 4:
             st.write('De 241 a 270 segundos')
-        elif e== 5:
+        elif dura == 5:
             st.write('De 271 a 300 segundos')
-        elif e== 6:
+        elif dura== 6:
             st.write('Mayor a 301 segundos')
-
 
         return features 
 
@@ -157,7 +157,7 @@ def main():
 
         
     #escoger el modelo preferido
-    option = [ 'Árbol de decision']
+    option = [ 'Árbol de decisión']
 
     model = st.sidebar.selectbox('Algoritmo?', option)
 
@@ -180,7 +180,6 @@ def main():
             st.success('La probabilidad del Acierto es: {}'.format(probabilidad[:,1]*100))
         else:
             st.success(classify(decision_tree.predict(df)))
-
             x_i=np.asarray(df).reshape(1,-1)
             probabilidad = decision_tree.predict_proba(x_i)
             st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
