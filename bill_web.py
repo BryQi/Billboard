@@ -1,6 +1,11 @@
 #importar librerias
 from cmath import e
+<<<<<<< HEAD
 from pyexpat import features
+=======
+from textwrap import dedent
+from this import d
+>>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
 import streamlit as st
 import pickle
 import pandas as pd
@@ -24,12 +29,6 @@ with open('log_reg.pkl', 'rb') as lo:
 with open('decision_treeE.pkl', 'rb') as sv:
     decision_tree = pickle.load(sv)
 
-#funcion para clasificar las plantas 
-def estadoA(mood):
-    if mood == 6:
-        return 'Empowering'
-    elif mood == 100:
-        return 'Cool'
 
 #funcion para clasificar las plantas 
 def classify(num):
@@ -38,9 +37,6 @@ def classify(num):
     elif num == 1:
         return 'Llegó al Top'
 
-
-
-
 def main():
     #titulo
     st.title('Modelamiento')
@@ -48,23 +44,39 @@ def main():
     st.sidebar.header('User Input Parameters')
 
     #funcion para poner los parametrso en el sidebar
-    def user_input_parameters():
-        d=estado_Animo = st.sidebar.slider('Estado de animo', 0, 6, 0 )
-        st.write('Estado de animo')   
-        if d == 6:
-            st.write('Empowering')
-        elif d == 5:
-            st.write('Cool')
-        elif d== 4:
-            st.write('Yearning')
-        elif d== 3:
-            st.write('Gritty')
-        elif d== 2: 
-            st.write('Sensual')
-        elif d== 1:
-            st.write('Easygoing')
-
-        e=tiempo = st.sidebar.slider('Tiempo', 0, 2, 0)
+    def user_input_parameters():    
+        mood=estado_Animo = st.sidebar.slider('Estado de animo', 0, 6, 6 )
+        e=tiempo = st.sidebar.slider('Tiempo', 0, 2, 2)
+        genero = st.sidebar.slider('Genero', 0, 4, 4)
+        tipo_Artista = st.sidebar.slider('Tipo artista', 0, 3, 3)
+        edad = st.sidebar.slider('Edad', 0, 4, 4)
+        duracion = st.sidebar.slider('Duración', 0, 6, 6)
+        data = {'Estado de ánimo': estado_Animo,
+                'Tiempo': tiempo,
+                'Genero': genero,
+                'Tipo de artista': tipo_Artista,
+                'Edad': edad,
+                'Duracion': duracion,
+                }
+        features = pd.DataFrame(data, index=[0])
+###### datos estáticos quemados
+### Estado de ánimo
+    
+        st.subheader('Estado de ánimo')
+        if mood == 6:
+                st.caption('Empowering')
+        elif mood == 5:
+                st.caption('Cool')
+        elif mood == 4:
+               st.caption('Yearning')
+        elif mood == 3:
+                st.caption('Gritty')
+        elif mood == 2: 
+                st.caption('Sensual')
+        elif mood == 1:
+                st.caption('Easygoing')
+### tiempo
+        st.subheader('Tiempo')
         if e == 0:
             st.write('Fast Tempo')
         elif e == 1:
@@ -72,7 +84,8 @@ def main():
         elif e== 2:
             st.write('Medium Tempo')
         
-        genero = st.sidebar.slider('Genero', 0, 4, 0)
+### género
+        st.subheader('Genero')
         if e == 0:
             st.write('Soundtrack - Jazz - Other')
         elif e == 1:
@@ -82,9 +95,9 @@ def main():
         elif e== 3:
             st.write('Pop')
         elif e== 4:
-            st.write('Urban')
-
-        tipo_Artista = st.sidebar.slider('Tipo artista', 0, 3, 0)
+            st.write('Urban') 
+### tipo de artista
+        st.subheader('Tipo de artista')
         if e == 0:
             st.write(' ')
         elif e == 1:
@@ -93,9 +106,9 @@ def main():
             st.write('Female')
         elif e== 3:
             st.write('Male')
-        
 
-        edad = st.sidebar.slider('Edad', 0, 4, 0)
+### edad
+        st.subheader('Edad')
         if e == 0:
             st.write('Monor a 21 años')
         elif e == 1:
@@ -106,8 +119,8 @@ def main():
             st.write('De 31 a 40 años')
         elif e== 4:
             st.write('Mayor a 41 años')
-
-        duracion = st.sidebar.slider('Duración', 0, 6, 0)
+### edad
+        st.subheader('Duración')
         if e == 0:
             st.write('Monor a 150 segundos')
         elif e == 1:
@@ -123,29 +136,38 @@ def main():
         elif e== 6:
             st.write('Mayor a 301 segundos')
 
-        data = {'Estado de ánimo': estado_Animo,
-                'Tiempo': tiempo,
-                'Genero': genero,
-                'Tipo de artista': tipo_Artista,
-                'Edad': edad,
-                'Duracion': duracion,
-                }
-        features = pd.DataFrame(data, index=[0])
-        return features
-    
+
+        return features 
+
     df = user_input_parameters()
+<<<<<<< HEAD
         
     #escoger el modelo preferido
     option = ['Linear Regression', 'Logistic Regression', 'Árbol']
 
     model = st.sidebar.selectbox('Which model you like to use?', option)
+=======
 
-    st.subheader('Parámetros de entrada')
+
+
+    #escoger el modelo preferido
+    option = ['Linear Regression', 'Logistic Regression', 'Árbol de desición']
+    model = st.sidebar.selectbox('Que modelo desea usar?', option)
+>>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
+
+    #st.subheader('Parámetros de entrada')
     st.subheader(model)
 
     st.write(df)
 
+<<<<<<< HEAD
     
+=======
+
+    
+        
+
+>>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
     if st.button('EJECUTAR PARA PREDECIR'):
         x_i = np.asarray(df).reshape(1,-1)
         if model == 'Linear Regression':
@@ -159,12 +181,17 @@ def main():
             st.success('La probabilidad del Acierto es: {}'.format(probabilidad[:,1]*100))
         else:
             st.success(classify(decision_tree.predict(df)))
+<<<<<<< HEAD
             x_i=np.asarray(df).reshape(1,-1)
             probabilidad = decision_tree.predict_proba(x_i)
             st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
             
     
    
+=======
+
+     
+>>>>>>> 8fc2c9c2dd1c5a9ad5e3c88f563d2fba9424f08e
 if __name__ == '__main__':
     main()
     
