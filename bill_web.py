@@ -137,12 +137,15 @@ def main():
         
     #escoger el modelo preferido
     option = ['Linear Regression', 'Logistic Regression', 'Árbol']
+
     model = st.sidebar.selectbox('Which model you like to use?', option)
 
     st.subheader('Parámetros de entrada')
     st.subheader(model)
+
     st.write(df)
 
+    
     if st.button('EJECUTAR PARA PREDECIR'):
         x_i = np.asarray(df).reshape(1,-1)
         if model == 'Linear Regression':
@@ -159,10 +162,9 @@ def main():
             x_i=np.asarray(df).reshape(1,-1)
             probabilidad = decision_tree.predict_proba(x_i)
             st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
+            
     
-
-    
-
+   
 if __name__ == '__main__':
     main()
     
