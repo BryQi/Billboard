@@ -13,7 +13,7 @@ Para proyecto Billboard--------------------------------------------------
 # pip install streamlit
 # pip install sklearn
 
-#  streamlit run bill_web.py
+# streamlit run bill_web.py
 #
 # pip3 install pandas --upgrade 
 
@@ -28,7 +28,7 @@ git branch -M main
 git remote add origin https://github.com/brayanMASTER/Billboard.git
 git push -u origin main
 
-
+git init 
 git remote add origin https://github.com/brayanMASTER/Billboard.git
 git branch -M main
 git push -u origin main
