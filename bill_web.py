@@ -47,7 +47,7 @@ def main():
     que ayuda a promover la industria musical nacional e internacional, y se define como la más importante de las listas de
      Billboard junto con la Billboard 200.
     <br>
-    Variables de anális:
+    Variables de análisis:
     <br>
     <br>
     </div>
