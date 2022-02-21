@@ -10,7 +10,7 @@ Repositorios.
 | 1 | Machine Learning    | [link](https://colab.research.google.com/drive/1K2_JW8j71PMAQ2cQf_v17B73LvEQ9c5S?usp=sharing)      |
 | 2 | Pruebas del Modelo Implementado | [link](https://billboardwebapp.herokuapp.com/) |
 
-### Contribuye
+### Contribuye ⚙️
 
 En los Google Colab adjunto se encuestra toda la información necesaria para el análisis, entramiento e implentación del modelo, si tiene dificultades para seguir adelante hacernos saber.
 
