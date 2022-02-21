@@ -27,7 +27,7 @@ with open('decision_treeE.pkl', 'rb') as sv:
     decision_tree = pickle.load(sv)
 
 
-#funcion para clasificar las plantas 
+#funcion para clasificar 
 def classify(num):
     if num == 0:
         return 'No llegó al Top'
