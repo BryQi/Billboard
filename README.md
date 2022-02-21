@@ -21,3 +21,11 @@ En los Google Colab adjunto se encuestra toda la información necesaria para el 
 Este proyecto se puede mejorar y evolucionará en las próximas semanas. ¡Sus contribuciones son bienvenidas! Aquí hay cosas que puede hacer para ayudar:
 - Corrija los errores si encuentra alguno.
 - Creemos nuevos tutoriales.
+
+
+
+
+
+## Autores ✒️
+* **Brayan Correa** - *Implementación del Modelo Final* - [brayanMASTER](https://github.com/brayanMASTER)
+* **Deiby Calva** - *Implementación de Análisis Exploratorio de Datos* - [DeibyCalva](https://github.com/DeibyCalva)
