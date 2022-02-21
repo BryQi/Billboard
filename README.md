@@ -11,11 +11,12 @@ Aquí los temas hasta hoy.
 | 2 | Pruebas del Modelo Implementado | [link](https://billboardwebapp.herokuapp.com/) |
 
 ### Contribuye
-Una vez que haya terminado de trabajar algún tutorial, ¡tus comentarios serán muy apreciados!
 
-Y si tienes dificultades para seguir adelante, ¡háznolo saber! Este tutorial está destinado a ser lo más accesible posible; queremos saber si no es el caso.
+En los Google Colab adjunto se encuestra toda la infoamción necesaria para el análisis, entramiento e implentación del modelo, si tiene dificultades para seguir adelante hacernos saber
+
+
 ​
-¿Tienes una pregunta? Únete a nuestro [Discord](https://t.co/1n75wi976V?amp=1) y pregunta.
+¿Tienes una pregunta? Únete a nuestro [Telegram](https://t.co/1n75wi976V?amp=1) y pregunta.
 
 Este proyecto se puede mejorar y evolucionará en las próximas semanas. ¡Sus contribuciones son bienvenidas! Aquí hay cosas que puede hacer para ayudar:
 - Corrija los errores si encuentra alguno.
