@@ -130,8 +130,6 @@ x_train = artists_encoded.drop(['top'], axis=1).values
 
 
 
-lin_reg = LinearRegression()
-log_reg = LogisticRegression()
 # Crear Arbol de decision con profundidad = 4
 decision_tree = tree.DecisionTreeClassifier(criterion='entropy',
                                             min_samples_split=20,
@@ -140,15 +138,8 @@ decision_tree = tree.DecisionTreeClassifier(criterion='entropy',
                                             class_weight={1:3.5})
 
 #entrenar modelos
-lin_regr = lin_reg.fit(x_train, y_train)
-log_regr = log_reg.fit(x_train, y_train)
 decision_treeE = decision_tree.fit(x_train, y_train)
 
-with open('lin_reg.pkl', 'wb') as li:
-    pickle.dump(lin_regr, li)
-
-with open('log_reg.pkl', 'wb') as lo:
-    pickle.dump(log_regr, lo)
 
 with open('decision_treeE.pkl', 'wb') as sv:
     pickle.dump(decision_treeE, sv)
