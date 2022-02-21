@@ -1,8 +1,8 @@
 # Billboard
 
-Comienza en procesamiento del lenguaje natural usando [Hugging Face](https://huggingface.co/)!
 
-Aquí los temas hasta hoy.
+
+Repositorios.
 
 |   | Tema                                                  | Dónde?                                                                                                                |
 |---|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
@@ -12,7 +12,7 @@ Aquí los temas hasta hoy.
 
 ### Contribuye
 
-En los Google Colab adjunto se encuestra toda la infoamción necesaria para el análisis, entramiento e implentación del modelo, si tiene dificultades para seguir adelante hacernos saber
+En los Google Colab adjunto se encuestra toda la infoamción necesaria para el análisis, entramiento e implentación del modelo, si tiene dificultades para seguir adelante hacernos saber.
 
 
 ​
@@ -21,4 +21,3 @@ En los Google Colab adjunto se encuestra toda la infoamción necesaria para el a
 Este proyecto se puede mejorar y evolucionará en las próximas semanas. ¡Sus contribuciones son bienvenidas! Aquí hay cosas que puede hacer para ayudar:
 - Corrija los errores si encuentra alguno.
 - Creemos nuevos tutoriales.
-- Tienes ideas sobre nuevos casos y ejercicios? Crea un issue o abre un pull request.
