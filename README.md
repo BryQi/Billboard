@@ -16,7 +16,7 @@ En los Google Colab adjunto se encuestra toda la infoamción necesaria para el a
 
 
 ​
-¿Tienes una pregunta? Únete a nuestro [Telegram](https://t.co/1n75wi976V?amp=1) y pregunta.
+¿Tienes una pregunta? Únete a nuestro [Telegram 1](https://t.me/Deiby_Calva) o [Telegram 2](https://t.me/brayanMaster)y pregunta.
 
 Este proyecto se puede mejorar y evolucionará en las próximas semanas. ¡Sus contribuciones son bienvenidas! Aquí hay cosas que puede hacer para ayudar:
 - Corrija los errores si encuentra alguno.
