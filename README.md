@@ -8,7 +8,7 @@ Aquí los temas hasta hoy.
 |---|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | 0 | Análisis Exploratorio de Datos (AED)                     | [link](https://colab.research.google.com/drive/1cQgeyKOgcr678eJursOE-BmyHnHCMfSb?usp=sharing)                        |
 | 1 | Machine Learning    | [link](https://colab.research.google.com/drive/1K2_JW8j71PMAQ2cQf_v17B73LvEQ9c5S?usp=sharing)      |
-| 2 | NLP en español: Fine-tuning para clasificar tweets | [link](https://github.com/omarespejel/Hugging-Face-101-ES/blob/main/2_NLP_en_espa%C3%B1ol:_Fine-tuning_para_clasificar_tweets.ipynb) |
+| 2 | NLP en españo: Fine-tuning para clasificar tweets | [link](https://github.com/omarespejel/Hugging-Face-101-ES/blob/main/2_NLP_en_espa%C3%B1ol:_Fine-tuning_para_clasificar_tweets.ipynb) |
 
 ### Contribuye
 Una vez que haya terminado de trabajar algún tutorial, ¡tus comentarios serán muy apreciados!
