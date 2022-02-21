@@ -7,7 +7,7 @@ Aquí los temas hasta hoy.
 |   | Tema                                                  | Dónde?                                                                                                                |
 |---|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | 0 | Análisis Exploratorio de Datos (AED)                     | [link](https://colab.research.google.com/drive/1cQgeyKOgcr678eJursOE-BmyHnHCMfSb?usp=sharing)                        |
-| 1 | NLP en español: Importando un modelo y tokenizando    | [link](https://github.com/omarespejel/Hugging-Face-101-ES/blob/main/1_NLP_en_espa%C3%B1ol:_Importando_un_modelo_y_tokenizando.ipynb)      |
+| 1 | Machine Learning    | [link](https://colab.research.google.com/drive/1K2_JW8j71PMAQ2cQf_v17B73LvEQ9c5S?usp=sharing)      |
 | 2 | NLP en español: Fine-tuning para clasificar tweets | [link](https://github.com/omarespejel/Hugging-Face-101-ES/blob/main/2_NLP_en_espa%C3%B1ol:_Fine-tuning_para_clasificar_tweets.ipynb) |
 
 ### Contribuye
