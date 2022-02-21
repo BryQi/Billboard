@@ -12,7 +12,7 @@ Repositorios.
 
 ### Contribuye
 
-En los Google Colab adjunto se encuestra toda la infoamción necesaria para el análisis, entramiento e implentación del modelo, si tiene dificultades para seguir adelante hacernos saber.
+En los Google Colab adjunto se encuestra toda la información necesaria para el análisis, entramiento e implentación del modelo, si tiene dificultades para seguir adelante hacernos saber.
 
 
 ​
