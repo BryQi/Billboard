@@ -16,13 +16,6 @@ import numpy as np
 #varaible vacia para almacenar probabilidad
 decision_tree = ''
 
-with open('lin_reg.pkl', 'rb') as li:
-    lin_reg = pickle.load(li)
-
-with open('log_reg.pkl', 'rb') as lo:
-    log_reg = pickle.load(lo)
-
-
 with open('decision_treeE.pkl', 'rb') as sv:
     decision_tree = pickle.load(sv)
 
@@ -168,20 +161,11 @@ def main():
 
     if st.button('EJECUTAR PARA PREDECIR'):
         x_i = np.asarray(df).reshape(1,-1)
-        if model == 'Linear Regression':
-            st.success(classify(lin_reg.predict(df)))
-            x_i = np.asarray(df).reshape(1,-1)  
-            st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100))
-
-        elif model == 'Logistic Regression':
-            st.success(classify(log_reg.predict(df)))
-            x_i=np.asarray(df).reshape(1,-1)
-            st.success('La probabilidad del Acierto es: {}'.format(probabilidad[:,1]*100))
-        else:
+        if model == 'Árbol de decisión':
             st.success(classify(decision_tree.predict(df)))
             x_i=np.asarray(df).reshape(1,-1)
             probabilidad = decision_tree.predict_proba(x_i)
-            st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100 )+ "%")
+            st.success('La probabilidad del acierto es: {}'.format(probabilidad[:,1]*100 )+ "%")           
             
 if __name__ == '__main__':
     main()
