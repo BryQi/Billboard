@@ -25,5 +25,5 @@ Este proyecto se puede mejorar y evolucionará en las próximas semanas. ¡Sus c
 
 
 ## Autores ✒️
-* **Deiby Calva** - *Análisis Exploratorio de Datos e implementación Machine Learning* - [DeibyCalva](https://github.com/DeibyCalva)
-* **Brayan Correa** - *Análisis Exploratorio de Datos e implementación del Modelo Entrenado* - [brayanMASTER](https://github.com/brayanMASTER)
+🧑‍💻* **Deiby Calva** - *Análisis Exploratorio de Datos e implementación Machine Learning* - [DeibyCalva](https://github.com/DeibyCalva)
+🧑‍💻* **Brayan Correa** - *Análisis Exploratorio de Datos e implementación del Modelo Entrenado* - [brayanMASTER](https://github.com/brayanMASTER)
